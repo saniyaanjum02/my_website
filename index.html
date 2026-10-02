@@ -1,0 +1,1327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CraftiqueMagic | DIY Earrings & Rhinestone Creations</title>
+
+    <style>
+
+        /* =========================
+           GENERAL
+        ========================= */
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fffafc;
+            color: #302534;
+            line-height: 1.6;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        header {
+            background-color: white;
+            padding: 20px 8%;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+            color: #6d477a;
+        }
+
+        nav {
+            display: flex;
+            gap: 25px;
+            align-items: center;
+        }
+
+        nav a {
+            color: #4b3a4f;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: #b88932;
+        }
+
+        .youtube-button {
+            background-color: #d9233e;
+            color: white;
+            padding: 10px 18px;
+            border-radius: 25px;
+            font-weight: bold;
+        }
+
+        .youtube-button:hover {
+            background-color: #b81730;
+        }
+
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            min-height: 90vh;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 70px 8%;
+
+            background:
+                linear-gradient(
+                    120deg,
+                    #fffafc,
+                    #f9e9f0
+                );
+        }
+
+        .hero-text {
+            width: 50%;
+        }
+
+        .hero-text h1 {
+            font-size: 60px;
+            line-height: 1.1;
+            color: #4b315e;
+            margin-bottom: 20px;
+        }
+
+        .hero-text h1 span {
+            color: #c39a4a;
+        }
+
+        .hero-text p {
+            font-size: 20px;
+            color: #66596a;
+            margin-bottom: 30px;
+            max-width: 600px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .main-button {
+            background-color: #6d477a;
+            color: white;
+
+            padding: 14px 25px;
+            border-radius: 30px;
+
+            font-weight: bold;
+        }
+
+        .main-button:hover {
+            background-color: #513361;
+        }
+
+        .secondary-button {
+            border: 2px solid #6d477a;
+            color: #6d477a;
+
+            padding: 12px 25px;
+            border-radius: 30px;
+
+            font-weight: bold;
+        }
+
+        .secondary-button:hover {
+            background-color: #6d477a;
+            color: white;
+        }
+
+
+        /* HERO IMAGE */
+
+        .hero-image {
+            width: 40%;
+        }
+
+        .hero-image img {
+            width: 100%;
+            max-width: 450px;
+
+            border-radius: 30px;
+
+            box-shadow:
+                0 20px 50px rgba(75, 49, 94, 0.25);
+        }
+
+
+        /* =========================
+           GENERAL SECTIONS
+        ========================= */
+
+        section {
+            padding: 90px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 38px;
+            color: #4b315e;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: #766a78;
+            max-width: 650px;
+            margin: auto;
+        }
+
+
+        /* =========================
+           ABOUT
+        ========================= */
+
+        .about {
+            text-align: center;
+        }
+
+        .about-text {
+            max-width: 800px;
+            margin: auto;
+
+            font-size: 18px;
+            color: #5d5260;
+        }
+
+        .about-cards {
+            margin-top: 45px;
+
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .about-card {
+            background: white;
+
+            padding: 35px 25px;
+
+            border-radius: 20px;
+
+            box-shadow:
+                0 10px 30px rgba(0, 0, 0, 0.07);
+        }
+
+        .about-card .icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .about-card h3 {
+            color: #6d477a;
+            margin-bottom: 10px;
+        }
+
+
+        /* =========================
+           FEATURED EARRINGS
+        ========================= */
+
+        .featured {
+            background-color: #f7edf2;
+        }
+
+        .earring-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 30px;
+        }
+
+        .earring-card {
+            background: white;
+
+            border-radius: 20px;
+            overflow: hidden;
+
+            box-shadow:
+                0 10px 30px rgba(0, 0, 0, 0.08);
+
+            transition: 0.3s;
+        }
+
+        .earring-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .earring-card img {
+            width: 100%;
+            height: 280px;
+
+            object-fit: cover;
+        }
+
+        .earring-info {
+            padding: 25px;
+        }
+
+        .earring-info h3 {
+            color: #4b315e;
+            margin-bottom: 10px;
+        }
+
+        .earring-info p {
+            color: #716773;
+            margin-bottom: 20px;
+        }
+
+        .watch-button {
+            display: inline-block;
+
+            background-color: #6d477a;
+            color: white;
+
+            padding: 10px 18px;
+
+            border-radius: 20px;
+        }
+
+
+        /* =========================
+           PROCESS
+        ========================= */
+
+        .process-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 20px;
+
+            text-align: center;
+        }
+
+        .process-card {
+            padding: 30px 20px;
+        }
+
+        .process-number {
+            width: 60px;
+            height: 60px;
+
+            margin: auto;
+            margin-bottom: 20px;
+
+            border-radius: 50%;
+
+            background-color: #ead5df;
+            color: #6d477a;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .process-card h3 {
+            margin-bottom: 10px;
+            color: #4b315e;
+        }
+
+
+        /* =========================
+           VIDEO SECTION
+        ========================= */
+
+        .videos {
+            background-color: #4b315e;
+            color: white;
+        }
+
+        .videos .section-title h2 {
+            color: white;
+        }
+
+        .videos .section-title p {
+            color: #e5dce8;
+        }
+
+        .video-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 30px;
+        }
+
+        .video-card {
+            background-color: white;
+            color: #302534;
+
+            border-radius: 18px;
+            overflow: hidden;
+        }
+
+            .video-card img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+        
+
+        .video-info {
+            padding: 20px;
+        }
+
+        .video-info h3 {
+            color: #4b315e;
+            margin-bottom: 10px;
+        }
+
+        .video-info a {
+            color: #d9233e;
+            font-weight: bold;
+        }
+
+        .all-videos {
+            text-align: center;
+            margin-top: 45px;
+        }
+
+        .all-videos a {
+            display: inline-block;
+
+            background-color: #c39a4a;
+            color: white;
+
+            padding: 14px 25px;
+
+            border-radius: 30px;
+
+            font-weight: bold;
+        }
+
+
+        /* =========================
+           GALLERY
+        ========================= */
+
+        .gallery {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            column-gap: 3px;
+            row-gap: 10px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 250px;
+
+            object-fit: contain;
+            object-position: center;
+            border-radius: 15px;
+
+            transition: 0.3s;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.03);
+        }
+
+
+        /* =========================
+           CREATOR
+        ========================= */
+
+        .creator {
+            text-align: center;
+
+            background-color: #fff3f7;
+        }
+
+        .creator-text {
+            max-width: 750px;
+            margin: auto;
+
+            font-size: 18px;
+            color: #615663;
+        }
+
+
+        /* =========================
+           SUBSCRIBE
+        ========================= */
+
+        .subscribe {
+            text-align: center;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #6d477a,
+                    #4b315e
+                );
+
+            color: white;
+        }
+
+        .subscribe h2 {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        .subscribe p {
+            margin-bottom: 30px;
+            color: #eee5f0;
+        }
+
+        .subscribe a {
+            display: inline-block;
+
+            background-color: #d9233e;
+            color: white;
+
+            padding: 15px 30px;
+
+            border-radius: 30px;
+
+            font-weight: bold;
+        }
+
+        .subscribe a:hover {
+            background-color: #b81730;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background-color: #211d22;
+            color: #ddd;
+
+            text-align: center;
+
+            padding: 35px 20px;
+        }
+
+        footer h3 {
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        footer p {
+            margin: 5px;
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 800px) {
+
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                gap: 40px;
+            }
+
+            .hero-text {
+                width: 100%;
+            }
+
+            .hero-text h1 {
+                font-size: 42px;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+
+            .hero-image {
+                width: 80%;
+            }
+
+            .about-cards,
+            .earring-grid,
+            .video-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .process-grid {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+            .gallery {
+                grid-template-columns: 1fr 1fr;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+
+    <header>
+
+        <div class="logo">
+            ✨ CraftiqueMagic
+        </div>
+
+        <nav>
+
+            <a href="#home">Home</a>
+
+            <a href="#about">About</a>
+
+            <a href="#earrings">Earrings</a>
+
+            <a href="#videos">Tutorials</a>
+
+            <a href="#gallery">Gallery</a>
+
+            <!-- CHANGE THIS LINK -->
+            <a
+                class="youtube-button"
+                href="https://www.youtube.com/@CraftiqueMagic"
+                target="_blank">
+
+                🔴 YouTube
+
+            </a>
+
+        </nav>
+
+    </header>
+
+
+
+    <main>
+
+
+        <!-- =========================
+             HERO
+        ========================== -->
+
+        <section class="hero" id="home">
+
+            <div class="hero-text">
+
+                <h1>
+                    Sparkle.
+                    <span>Create.</span>
+                    Shine. ✨
+                </h1>
+
+                <p>
+                    Welcome to CraftiqueMagic — a creative world
+                    of DIY earrings, sparkling rhinestone designs,
+                    and beautiful handmade jewelry.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a
+                        href="#earrings"
+                        class="main-button">
+
+                        💎 Explore Earrings
+
+                    </a>
+
+                    <a
+                        href="https://www.youtube.com/@CraftiqueMagic"
+                        target="blank"
+                        class="secondary-button">
+
+                        🔴 Watch on YouTube
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="hero-image">
+
+                <!-- CHANGE THIS IMAGE -->
+                <img
+                    src="logo.jpg"
+                    alt="Beautiful rhinestone handmade earring">
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             ABOUT
+        ========================== -->
+
+        <section class="about" id="about">
+
+            <div class="section-title">
+
+                <h2>
+                    ✨ Welcome to CraftiqueMagic
+                </h2>
+
+            </div>
+
+            <p class="about-text">
+
+                CraftiqueMagic is a creative space dedicated
+                to beautiful DIY earrings and sparkling
+                rhinestone jewelry.
+
+                <br><br>
+
+                Discover creative earring designs,
+                rhinestone creations, tutorials, and
+                inspiring ideas that turn simple materials
+                into something truly special.
+
+            </p>
+
+
+            <div class="about-cards">
+
+
+                <div class="about-card">
+
+                    <div class="icon">
+                        💎
+                    </div>
+
+                    <h3>
+                        DIY Earrings
+                    </h3>
+
+                    <p>
+                        Create unique handmade earrings
+                        with your own personal style.
+                    </p>
+
+                </div>
+
+
+                <div class="about-card">
+
+                    <div class="icon">
+                        ✨
+                    </div>
+
+                    <h3>
+                        Rhinestone Designs
+                    </h3>
+
+                    <p>
+                        Add sparkle and shine with
+                        beautiful rhinestone details.
+                    </p>
+
+                </div>
+
+
+                <div class="about-card">
+
+                    <div class="icon">
+                        🎨
+                    </div>
+
+                    <h3>
+                        Creative Tutorials
+                    </h3>
+
+                    <p>
+                        Follow creative tutorials and
+                        learn how each piece comes together.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             FEATURED EARRINGS
+        ========================== -->
+
+        <section class="featured" id="earrings">
+
+            <div class="section-title">
+
+                <h2>
+                    💎 Featured Creations
+                </h2>
+
+                <p>
+                    Discover some of our favorite
+                    sparkling creations.
+                </p>
+
+            </div>
+
+
+            <div class="earring-grid">
+
+
+                <!-- EARRING 1 -->
+
+                <div class="earring-card">
+
+                    <!-- CHANGE IMAGE -->
+                    <img
+                        src="c:\Users\pasha\Downloads\1000048839.png"
+                        alt="DIY rhinestone earrings">
+
+                    <div class="earring-info">
+
+                        <!-- CHANGE TITLE -->
+                        <h3>
+                            Sparkling Rhinestone Earrings
+                        </h3>
+
+                        <p>
+                            A beautiful handmade design
+                            created with sparkling rhinestones.
+                        </p>
+
+                        <!-- CHANGE LINK -->
+                        <a
+                            href="https://youtube.com/shorts/zuSqPEjB9so?si=GmgR90kRqyKnzu02"
+                            target="_blank"
+                            class="watch-button">
+
+                            ▶ Watch Tutorial
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- EARRING 2 -->
+
+                <div class="earring-card">
+
+                    <!-- CHANGE IMAGE -->
+                    <img
+                        src="c:\Users\pasha\Downloads\1000048841.png"
+                        alt="Handmade rhinestone earrings">
+
+                    <div class="earring-info">
+
+                        <h3>
+                            Handmade Rhinestone Design
+                        </h3>
+
+                        <p>
+                            A creative jewelry design
+                            made to sparkle and shine.
+                        </p>
+
+                        <a
+                            href="https://youtube.com/shorts/F8NyBpuZhkk?si=frLtcTaWypyprIUf"
+                            target="_blank"
+                            class="watch-button">
+
+                            ▶ Watch Tutorial
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- EARRING 3 -->
+
+                <div class="earring-card">
+
+                    <!-- CHANGE IMAGE -->
+                    <img
+                        src="c:\Users\pasha\Downloads\e1.png"
+                        alt="Creative DIY earrings">
+
+                    <div class="earring-info">
+
+                        <h3>
+                            Creative DIY Earrings
+                        </h3>
+
+                        <p>
+                            Turn simple materials into
+                            a beautiful statement piece.
+                        </p>
+
+                        <a
+                            href="https://youtube.com/shorts/-87R1UoGzvE?si=-YNthcHyzxXuyc9-"
+                            target="_blank"
+                            class="watch-button">
+
+                            ▶ Watch Tutorial
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             HOW IT'S MADE
+        ========================== -->
+
+        <section>
+
+            <div class="section-title">
+
+                <h2>
+                    ✨ From Sparkle to Statement
+                </h2>
+
+                <p>
+                    Every beautiful piece begins with
+                    creativity, patience, and a little sparkle.
+                </p>
+
+            </div>
+
+
+            <div class="process-grid">
+
+
+                <div class="process-card">
+
+                    <div class="process-number">
+                        01
+                    </div>
+
+                    <h3>
+                        Choose
+                    </h3>
+
+                    <p>
+                        Select your materials,
+                        colors, and rhinestones.
+                    </p>
+
+                </div>
+
+
+                <div class="process-card">
+
+                    <div class="process-number">
+                        02
+                    </div>
+
+                    <h3>
+                        Design
+                    </h3>
+
+                    <p>
+                        Plan the shape and
+                        arrangement of your earrings.
+                    </p>
+
+                </div>
+
+
+                <div class="process-card">
+
+                    <div class="process-number">
+                        03
+                    </div>
+
+                    <h3>
+                        Create
+                    </h3>
+
+                    <p>
+                        Bring the design to life
+                        piece by piece.
+                    </p>
+
+                </div>
+
+
+                <div class="process-card">
+
+                    <div class="process-number">
+                        04
+                    </div>
+
+                    <h3>
+                        Shine
+                    </h3>
+
+                    <p>
+                        Finish your creation
+                        and let it sparkle! ✨
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             VIDEOS
+        ========================== -->
+
+        <section class="videos" id="videos">
+
+            <div class="section-title">
+
+                <h2>
+                    🎥 Watch & Create
+                </h2>
+
+                <p>
+                    Follow CraftiqueMagic tutorials
+                    and create your own sparkling earrings.
+                </p>
+
+            </div>
+
+
+            <div class="video-grid">
+
+
+                <!-- VIDEO 1 -->
+
+                <div class="video-card">
+
+                    <!-- USE YOUTUBE THUMBNAIL -->
+                    <img
+                        src="2.jpeg"
+                        alt="CraftiqueMagic YouTube tutorial">
+
+                    <div class="video-info">
+
+                        <h3>
+                            DIY Rhinestone Earrings
+                        </h3>
+
+                        <a
+                            href="https://youtube.com/shorts/aI2T4R2GTrs?si=CAhrrz2PR7s5A6zR"
+                            target="_blank">
+
+                            ▶ Watch Video
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- VIDEO 2 -->
+
+                <div class="video-card">
+
+                    <img
+                        src="1.jpeg"
+                        alt="CraftiqueMagic earring tutorial">
+
+                    <div class="video-info">
+
+                        <h3>
+                            Sparkling Earring Tutorial
+                        </h3>
+
+                        <a
+                            href="https://youtube.com/shorts/Sxf7fvHFCMo?si=m5mo4NlWdg8h4Z8X"
+                            target="_blank">
+
+                            ▶ Watch Video
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- VIDEO 3 -->
+
+                <div class="video-card">
+
+                    <img
+                        src="1000048841.png"
+                        alt="DIY jewelry tutorial">
+
+                    <div class="video-info">
+
+                        <h3>
+                            Creative Jewelry DIY
+                        </h3>
+
+                        <a
+                            href="https://youtube.com/shorts/F8NyBpuZhkk?si=y8_L5GM7mbGLOCJV"
+                            target="_blank">
+
+                            ▶ Watch Video
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="all-videos">
+
+                <a
+                    href="https://www.youtube.com/@CraftiqueMagic"
+                    target="_blank">
+
+                    🔴 View All Videos
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             GALLERY
+        ========================== -->
+
+        <section id="gallery">
+
+            <div class="section-title">
+
+                <h2>
+                    💍 CraftiqueMagic Gallery
+                </h2>
+
+                <p>
+                    A glimpse into our world of
+                    handmade sparkle.
+                </p>
+
+            </div>
+
+
+            <div class="gallery">
+
+                <!-- CHANGE ALL THESE IMAGES -->
+
+                <img
+                    src="c:\Users\pasha\Downloads\e1.png"
+                    alt="Rhinestone earring">
+
+                <img
+                    src="c:\Users\pasha\Downloads\1000048839.png"
+                    alt="Handmade jewelry">
+
+                <img
+                    src="c:\Users\pasha\Downloads\1000048841.png"
+                    alt="DIY earrings">
+
+                <img
+                    src="c:\Users\pasha\Downloads\1000048845.png"
+                    alt="Sparkling rhinestone design">
+
+                <img
+                    src="c:\Users\pasha\Downloads\1.jpeg"
+                    alt="Handmade earrings">
+
+                <img
+                    src="c:\Users\pasha\Downloads\2.jpeg"
+                    alt="CraftiqueMagic creation">
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             CREATOR
+        ========================== -->
+
+        <section class="creator">
+
+            <div class="section-title">
+
+                <h2>
+                    ❤️ Made With Creativity
+                </h2>
+
+            </div>
+
+            <p class="creator-text">
+
+                Every creation begins with a simple idea.
+
+                <br><br>
+
+                CraftiqueMagic is about exploring creativity,
+                experimenting with beautiful designs, and
+                turning sparkling ideas into handmade jewelry.
+
+                <br><br>
+
+                <strong>
+                    Made by hand. Inspired by creativity.
+                    Finished with sparkle. ✨
+                </strong>
+
+            </p>
+
+        </section>
+
+
+
+        <!-- =========================
+             SUBSCRIBE
+        ========================== -->
+
+        <section class="subscribe">
+
+            <h2>
+                ✨ Ready to Make Something Sparkle?
+            </h2>
+
+            <p>
+                Join CraftiqueMagic for more DIY earrings,
+                rhinestone creations, tutorials, and inspiration.
+            </p>
+
+            <a
+                href="https://www.youtube.com/@CraftiqueMagic"
+                target="_blank">
+
+                🔴 SUBSCRIBE ON YOUTUBE
+
+            </a>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <h3>
+            ✨ CraftiqueMagic
+        </h3>
+
+        <p>
+            DIY Earrings • Rhinestone Jewelry • Creative Tutorials
+        </p>
+
+        <p>
+            Create • Sparkle • Shine ✨
+        </p>
+
+        <p>
+            © 2026 CraftiqueMagic
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>
